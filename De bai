@@ -1,0 +1,16 @@
+Some two-player games are played with a pile of pebbles. The first player can take a certain number of pebbles that depends on the current number of pebbles, leaving a smaller number of pebbles. The permissible moves depend on the game rules. Then the second player takes a turn, and again the first, until one of them is unable to make another legal move and loses.
+
+The Game interface below describes the game rules-the number of pebbles that are permitted after making a legal move from a given number of pebbles.
+
+A common game of this type is called Nim. A player must take at least one pebble and can take at most half of the pebbles. The NimGame class below provides the game rules for this game. The TwoThreeGame class provides rules for a different game. As long as there are at least four pebbles, a player can take two or three of them.
+
+A position (that is, a given number of pebbles) is winning if it isn't an immediate loss, and at least one of the moves yields a losing position for the other player.
+
+A position is losing if it is an immediate loss, or all of the moves lead to a winning position for the other player.
+
+In the Nim game, it happens that positions of the form 
+ are losing positions, and all others are winning positions.
+
+Implement the mutually recursive methods isWinningPosition and isLosingPosition.
+
+The nextPositions method of the Game interface returns the positions that result from legal moves.
